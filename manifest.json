@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+
+  "name": "Bag-o-Bets",
+  "description": "Checks for valid bets",
+  "version": "1.0",
+
+  "permissions": [
+    "tabs", "<all_urls>"
+  ],
+
+  "browser_action": {
+    "default_icon": "placeholder.jpg",
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+
+  "content_scripts": [
+    {
+    "matches": ["<all_urls>"],
+    "js": ["content.js"]
+    }
+  ]
+}
